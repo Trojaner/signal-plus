@@ -56,7 +56,7 @@ The following commands are available.
 #### COMMAND_SET_LED (0x01) 
 Sets a led to the given color.  
   
-**Payload: **  
+**Payload:**  
 ```
 [00] [led_id]
 [01] [R]
@@ -64,8 +64,8 @@ Sets a led to the given color.
 [03] [B]
 ```
 
-**Example Packet**:
-Set 6th led color to (0, 0, 255). 
+**Example Packet**:  
+Set 6th led color to (0, 0, 255).  
 `FC 01 04 E7 06 00 00 FF B2`
 
 #### COMMAND_SET_LED_CHUNK (0x02) (experimental)
@@ -87,21 +87,22 @@ Set 6th led color to (0, 0, 255).
 [??] [B]
 ```
 **Example**: 
-Set leds 0 - 10 to a rainbow gradient.
+Set leds 0 - 10 to a rainbow gradient.  
 `FC 02 21 75 00 0A BF 40 40 BF 8C 40 A6 BF 40 59 BF 40 40 BF 73 40 BF BF 40 73 BF 59 40 BF A6 40 BF BF 40 8C 00 2B`  
+  
 **Note**: Does not work correctly yet.
 
 #### COMMAND_SET_BRIGHTNESS (0x02)
 Set the brightness for the entire LED strip.  
 
-**Payload: **  
+**Payload:**  
 ```
 [00] [led_id]
 [01] [brightness]
 ```
 
-**Example Packet**:
-Set brightness to 64.
+**Example Packet**:  
+Set brightness to 64.  
 `FC 03 01 DA 40 9D`  
   
 ###  Limitations
@@ -116,4 +117,4 @@ Depending on your Arduino, many packets may get lost because of [FastLED's inter
        Note: SignalRGB does not support non-USB devices at the moment.
 
 ## License
-MIT
+[MIT](https://github.com/Trojaner/arduino-argb/blob/master/LICENSE.txt)
