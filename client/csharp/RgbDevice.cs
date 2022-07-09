@@ -117,8 +117,8 @@ public class RgbDevice : IDisposable
         Buffer.BlockCopy(payload, 0, packet, header.Length, payload.Length);
         packet[^1] = Crc8.ComputeChecksum(payload, payload.Length);
 
-        Console.WriteLine();
-        Console.WriteLine("Sending: " + string.Join(" ", packet.Select(b => b.ToString("X2"))));
+        //Console.WriteLine();
+        //Console.WriteLine("Sending: " + string.Join(" ", packet.Select(b => b.ToString("X2"))));
 
         await _port.BaseStream.WriteAsync(packet.AsMemory());
     }
