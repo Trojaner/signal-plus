@@ -95,7 +95,7 @@ Set leds 0 - 10 to a rainbow gradient.
   
 **Note**: Does not work correctly yet.
 
-#### COMMAND_SET_BRIGHTNESS (0x02)
+#### COMMAND_SET_BRIGHTNESS (0x03)
 Set the brightness for the entire LED strip.  
 
 **Payload:**  
