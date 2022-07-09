@@ -2,7 +2,8 @@
 # Arduino ARGB Controller
 FastLED based Arduino ARGB controller that's controllable from PC.
 
-![](https://github.com/Trojaner/arduino-argb/blob/master/Example.gif)
+![](https://github.com/Trojaner/arduino-argb/blob/master/Example.gif)  
+*InWin 309 PC Case controlled by Arduino*
 
 ## About
 
@@ -17,7 +18,7 @@ A generic ARGB controller for Neopixel, WS2801, WS2811, WS2812B, LPD8806, TM1809
 
 ### 2. Connecting the LED Strip to the Arduino
 #### Example for WS2812B LED Strips
-![](https://i.imgur.com/1zlMvis.png)
+![](https://i.imgur.com/1zlMvis.png)  
 *Reference WS2812B for PC pinout*
 
 1. **LED Strip [D]** to **Arduino [PIN 3]**
