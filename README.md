@@ -2,6 +2,8 @@
 # Arduino ARGB Controller
 FastLED based Arduino ARGB controller that's controllable from PC.
 
+![](https://github.com/Trojaner/arduino-argb/blob/master/Example.gif)
+
 ## About
 
 A generic ARGB controller for Neopixel, WS2801, WS2811, WS2812B, LPD8806, TM1809 and more controllable from PC or other devices supporting serial communication.
