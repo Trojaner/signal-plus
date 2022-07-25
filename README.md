@@ -1,12 +1,22 @@
 
-# Arduino ARGB Controller
-FastLED based Arduino ARGB controller that's controllable from PC.
+# SignalPlus
+Add support more devices for SignalRGB.
 
-## About
+## Device Integrations
 
-A generic ARGB controller for Neopixel, WS2801, WS2811, WS2812B, LPD8806, TM1809 and more controllable from PC or other devices supporting serial communication.
+### Arduino Integration
+Create your own ARGB controller for Neopixel, WS2801, WS2811, WS2812B, LPD8806, TM1809 and more controllable from PC or other devices supporting serial communication.
 
-## Getting started
+### Yeelight
+Todo
+
+### Nanoleaf
+Todo
+
+### Govee
+Todo
+
+## Integrating Arduino
 
 ### 1. Requirements
 1. An Arduino board that supports high baud rates as high as 921.600. I use the Arduino Mega 2560 R3.  The ideal choice would be an Arduino Due with a level shifter as it does not suffer from [FastLED's interrupt issue](https://github.com/FastLED/FastLED/wiki/Interrupt-problems).
@@ -24,13 +34,13 @@ A generic ARGB controller for Neopixel, WS2801, WS2811, WS2812B, LPD8806, TM1809
 4. **Arduino [GND]** to **power source [GND]**
 
 ### 3. Software preparations
-1. Adjust the LED type and LED amount in the [firmware](https://github.com/Trojaner/arduino-argb/tree/master/firmware/Firmware.ino) by changing `LED_TYPE` and `NUM_LEDS` to your needs.
-2. Adjust the [C# client](https://github.com/Trojaner/arduino-argb/tree/master/client/csharp/) or write your own client program using your favorite language with the protocol below.
+1. Adjust the LED type and LED amount in the [firmware](https://github.com/Trojaner/signal-plus/tree/master/firmware/arduino/Firmware.ino) by changing `LED_TYPE` and `NUM_LEDS` to your needs.
+2. Adjust the [C# client](https://github.com/Trojaner/arduino-argb/tree/master/csharp/) or write your own client program using your favorite language with the protocol below.
 3. Done!
 
 ## Protocol
 The protocol was designed with speed in mind. 
-A [sample C# based implementation](https://github.com/Trojaner/arduino-argb/tree/master/client/csharp/RgbDevice.cs) is available.
+A [sample C# based implementation](https://github.com/Trojaner/signal-plus/tree/master/client/csharp/RgbDevice.cs) is available.
 
 ### Packet Structure
 
@@ -109,12 +119,9 @@ Set brightness to 64.
 Depending on your Arduino, many packets may get lost because of [FastLED's interrupt issue](https://github.com/FastLED/FastLED/wiki/Interrupt-problems). To counter this, use a high baud rate and keep "spamming" your current state instead of sending it only once.   
 
 ## To-Do
-- [ ] Setting data pin, led type, and led count dynamically from clients
-- [ ] Supporting more than 255 LEDs and multiple channels
+- [ ] Supporting more than 255 LEDs and multiple channels for Arduino
 - [ ] Autostart & hiding console
 - [ ] GUI
-- [ ] [SignalRGB](https://www.signalrgb.com/) integration  
-       Note: SignalRGB does not support non-USB devices at the moment.
 
 ## License
-[MIT](https://github.com/Trojaner/arduino-argb/blob/master/LICENSE.txt)
+[MIT](https://github.com/Trojaner/signal-plus/blob/master/LICENSE.txt)

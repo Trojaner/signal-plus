@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>SignalPlus</RootNamespace>
+		<AssemblyName>SignalPlusClient</AssemblyName>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Iot.Device.Bindings" Version="2.1.0" />
+		<PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+		<PackageReference Include="Vanara.PInvoke.Kernel32" Version="3.4.5" />
+		<PackageReference Include="Vanara.PInvoke.SetupAPI" Version="3.4.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="driver_install.bat">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="driver_uninstall.bat">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="gdrv-loader\gdrv-loader.exe">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="kdu\drv64.dll">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="kdu\dummy.sys">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="kdu\dummy2.sys">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="kdu\kdu.exe">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\attacher.exe">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usb.ids">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip.exe">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_root.inf">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_stub.inx">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_test.pfx">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci.cat">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci.inf">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci.sys">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci_ude.cat">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci_ude.inf">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="usbip\usbip_vhci_ude.sys">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
