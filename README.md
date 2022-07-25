@@ -1,6 +1,8 @@
 
 # SignalPlus
-Add support more devices for SignalRGB.
+More device support for SignalRGB
+
+![](https://github.com/Trojaner/signal-plus/blob/master/Example.gif)
 
 ## Device Integrations
 
